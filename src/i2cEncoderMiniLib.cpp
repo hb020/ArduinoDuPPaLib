@@ -162,7 +162,7 @@ void i2cEncoderMiniLib::writeInterruptConfig(uint8_t interrupt) {
 
 /** Check if there is some attached callback and enable the corresponding interrupt **/
 void i2cEncoderMiniLib::autoconfigInterrupt(void) {
-  uint8_t reg = 0;
+  uint8_t reg=0;
 
   if (onButtonRelease != NULL)
     reg |= PUSHR;
@@ -226,7 +226,7 @@ void i2cEncoderMiniLib::writeDoublePushPeriod(uint8_t dperiod) {
   writeEncoder(REG_DPPERIOD, dperiod);
 }
 
-/** Write Anti-bouncing period register **/
+/** Change MiniEncoder I2C address **/
 void i2cEncoderMiniLib::ChangeI2CAddress(uint8_t add) {
   writeEncoder(REG_I2CADDRESS, add);
   writeEncoder(REG_I2CADDRESS, add);
